@@ -12,14 +12,16 @@ const About: React.FC = () => {
       </p>
 
       <p>
-        My coding journey began with C++ and JavaScript, and quickly evolved into building full-stack applications using the MERN stack. <br />
-        I thrive on creating systems that make a real impact - whether it's optimizing database performance by 40% with MongoDB indexing <br />
-        or implementing secure authentication systems with JWT and Redis.<br />
+        My coding journey began with C++ and JavaScript, and quickly evolved into building full-stack applications spanning the entire stack —
+        from React and Next.js on the frontend to Node.js, Express, Prisma, and PostgreSQL on the backend.<br />
         <br />
-        Currently exploring the cutting edge of technology with Generative AI and Web 3.0, while solving 300+ DSA problems to strengthen <br />
-        my algorithmic thinking. I believe in building solutions that are not just functional but scalable and efficient.<br />
+        Previously a <HighlightSpan>Software Developer Intern at Rentr</HighlightSpan> (AI-Powered PropTech, UK), where I engineered a
+        Bid Quotation System, implemented authentication, a file upload system, and resolved critical bugs in their contractor portal.<br />
         <br />
-        When I'm not coding, you'll find me exploring new tech stacks or contributing to open source projects.<br />
+        Deep into <HighlightSpan>Generative AI</HighlightSpan> — building with LangChain.js, RAG architecture, Google Gemini API,
+        function calling, and vector search using Pinecone. 500+ DSA problems solved across LeetCode, GeeksforGeeks, and Codeforces.<br />
+        <br />
+        I believe in building solutions that are not just functional but scalable and efficient.<br />
         Always learning, always building, always pushing boundaries.<br />
 
         <HighlightSpan>#BuildTheFuture</HighlightSpan>

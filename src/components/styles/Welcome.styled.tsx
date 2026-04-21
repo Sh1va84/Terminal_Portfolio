@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const blink = keyframes`
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+`;
+
+export const BlinkCursor = styled.span`
+  animation: ${blink} 1s step-start infinite;
+`;
 
 export const HeroContainer = styled.div`
   display: flex;

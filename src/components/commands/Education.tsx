@@ -25,7 +25,7 @@ const Education: React.FC = () => {
 const eduBg = [
   {
     title: "B.Tech in Electronics & Communication Engineering",
-    desc: "National Institute of Technology, Hamirpur | 2022 - 2026 | CGPA: 8.42/10",
+    desc: "National Institute of Technology, Hamirpur | 2022 - 2026 | CGPA: 8.4/10.0",
   },
   {
     title: "Higher Secondary Education (12th)",

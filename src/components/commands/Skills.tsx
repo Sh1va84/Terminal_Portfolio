@@ -11,22 +11,23 @@ const About: React.FC = () => {
                 <HighlightSpan>Here's what I actually build with code:</HighlightSpan>
             </p>
             <p>
-                <HighlightSpan>🚀 Technologies I work with:</HighlightSpan><br />
-                JavaScript, C++, Node.js, React, Express.js, MongoDB, Redis<br /><br />
-                
-                <HighlightSpan>🛠️ Tools I use to build and deploy:</HighlightSpan><br />
-                Git, Cloudinary, Judeo API, Monaco Editor, Supabase<br /><br />
-                
-                <HighlightSpan>💡 What I'm currently exploring:</HighlightSpan><br />
-                Generative AI, RAG Architecture, Vector Databases, Web 3.0<br /><br />
-                
-                <HighlightSpan>🎯 My development approach:</HighlightSpan><br />
-                Clean code architecture, Database optimization, Real-time systems,<br />
-                Scalable backend solutions, and User-friendly interfaces<br /><br />
-                
-                <HighlightSpan>🏆 Beyond coding:</HighlightSpan><br />
-                Problem-solving (300+ DSA problems), Team collaboration,<br />
-                Continuous learning, and Building projects that make an impact
+                <HighlightSpan>Languages:</HighlightSpan><br />
+                C++, JavaScript, TypeScript<br /><br />
+
+                <HighlightSpan>Frontend:</HighlightSpan><br />
+                React.js, Next.js, Redux Toolkit, Zustand, React Flow<br /><br />
+
+                <HighlightSpan>Backend & Tools:</HighlightSpan><br />
+                Node.js, Express.js, Prisma, Git, Postman, Linux/Shell<br /><br />
+
+                <HighlightSpan>Databases:</HighlightSpan><br />
+                PostgreSQL, MongoDB, Pinecone (Vector DB), Redis<br /><br />
+
+                <HighlightSpan>Generative AI:</HighlightSpan><br />
+                LangChain.js, RAG Architecture, Google Gemini API, Function Calling, Vector Search<br /><br />
+
+                <HighlightSpan>CS Foundations:</HighlightSpan><br />
+                Data Structures & Algorithms, Operating Systems, DBMS, Computer Networks
             </p>
         </AboutWrapper>
     );

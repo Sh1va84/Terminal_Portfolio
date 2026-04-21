@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
+export const OuterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`;
+
 export const Wrapper = styled.div`
   padding: 1.25rem;
   padding-top: 0.75rem;
 
   display: flex;
   flex-direction: column-reverse;
-  max-height: calc(100vh - 2rem);
+  flex: 1;
   overflow-y: auto;
 `;
 

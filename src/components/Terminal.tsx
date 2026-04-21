@@ -8,6 +8,7 @@ import React, {
 import _ from "lodash";
 import Output from "./Output";
 import TermInfo from "./TermInfo";
+import ChipBar from "./ChipBar";
 import {
   CmdNotFound,
   Empty,
@@ -16,6 +17,7 @@ import {
   Input,
   MobileBr,
   MobileSpan,
+  OuterContainer,
   Wrapper,
 } from "./styles/Terminal.styled";
 import { argTab } from "../utils/funcs";
@@ -27,24 +29,27 @@ type Command = {
 }[];
 
 export const commands: Command = [
-  { cmd: "about", desc: "learn more about me", tab: 8 },
-  // { cmd: "blogs", desc: "read my blogs in GUI format", tab: 8 },
-  { cmd: "clear", desc: "clear the terminal display", tab: 8 },
-  { cmd: "echo", desc: "display custom text or messages", tab: 9 },
-  { cmd: "education", desc: "explore my academic journey", tab: 4 },
-  { cmd: "email", desc: "reach out via Email", tab: 8 },
-  { cmd: "exit", desc: "close the current session", tab: 9 },
-  { cmd: "help", desc: "get a list of available commands", tab: 9 },
-  { cmd: "history", desc: "see your command usage history", tab: 6 },
-  { cmd: "projects", desc: "check out my projects", tab: 5 },
-  { cmd: "pwd", desc: "show the current working directory", tab: 10 },
-  { cmd: "resume", desc: "download my professional resume", tab: 7 },
-  { cmd: "skills", desc: "view my skill set", tab: 7 },
-  { cmd: "socials", desc: "discover my social media profiles", tab: 6 },
-  { cmd: "themes", desc: "browse through available themes", tab: 7 },
-  { cmd: "welcome", desc: "view the introductory section", tab: 6 },
-  // { cmd: "whoami", desc: "find out who the current user is", tab: 7 },
-      ];
+  // --- core portfolio ---
+  { cmd: "projects",   desc: "check out my projects",              tab: 5 },
+  { cmd: "skills",     desc: "view my skill set",                  tab: 7 },
+  { cmd: "experience", desc: "view my work experience",            tab: 4 },
+  { cmd: "resume",     desc: "download my professional resume",    tab: 7 },
+  { cmd: "about",      desc: "learn more about me",                tab: 8 },
+  { cmd: "education",  desc: "explore my academic journey",        tab: 4 },
+  { cmd: "socials",    desc: "discover my social media profiles",  tab: 6 },
+  { cmd: "email",      desc: "reach out via email",                tab: 8 },
+  // --- utility ---
+  { cmd: "clear",      desc: "clear the terminal display",         tab: 8 },
+  { cmd: "echo",       desc: "print text to the terminal",         tab: 9 },
+  { cmd: "exit",       desc: "close the current session",          tab: 9 },
+  { cmd: "help",       desc: "get a list of available commands",   tab: 9 },
+  { cmd: "history",    desc: "see your command usage history",     tab: 6 },
+  { cmd: "man",        desc: "show manual for a command",          tab: 9 },
+  { cmd: "pwd",        desc: "show the current working directory", tab: 10 },
+  { cmd: "themes",     desc: "browse available themes",            tab: 7 },
+  { cmd: "welcome",    desc: "view the introductory section",      tab: 6 },
+  { cmd: "whoami",     desc: "find out who the current user is",   tab: 7 },
+];
 
 type Term = {
   arg: string[];
@@ -78,6 +83,15 @@ const Terminal = () => {
     },
     [inputVal]
   );
+
+  const runCommand = useCallback((cmd: string) => {
+    setCmdHistory(prev => [cmd, ...prev]);
+    setInputVal("");
+    setRerender(true);
+    setHints([]);
+    setPointer(-1);
+    setTimeout(() => inputRef.current?.focus(), 50);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -183,6 +197,7 @@ const Terminal = () => {
   }, [inputRef, inputVal, pointer]);
 
   return (
+    <OuterContainer>
     <Wrapper data-testid="terminal-wrapper" ref={containerRef}>
       {hints.length > 1 && (
         <div>
@@ -244,6 +259,8 @@ const Terminal = () => {
         );
       })}
     </Wrapper>
+    <ChipBar runCommand={runCommand} />
+    </OuterContainer>
   );
 };
 

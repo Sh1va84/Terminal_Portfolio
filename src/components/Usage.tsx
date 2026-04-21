@@ -9,7 +9,7 @@ type Props = {
 const arg = {
 
   themes: { placeholder: "theme-name", example: "ubuntu" },
-  projects: { placeholder: "project-no", example: "4" },
+  projects: { placeholder: "project-no", example: "5" },
   socials: { placeholder: "social-no", example: "1" },
 
 };

@@ -3,6 +3,8 @@ import Clear from "./commands/Clear";
 import Echo from "./commands/Echo";
 import Education from "./commands/Education";
 import Email from "./commands/Email";
+import Experience from "./commands/Experience";
+import Man from "./commands/Man";
 import GeneralOutput from "./commands/GeneralOutput";
 import Blogs from "./commands/Blogs";
 import Resume from "./commands/Resume";
@@ -30,7 +32,7 @@ type Props = {
 const Output: React.FC<Props> = ({ index, cmd }) => {
   const { arg } = useContext(termContext);
 
-  const specialCmds = ["projects", "socials", "themes", "echo"];
+  const specialCmds = ["projects", "socials", "themes", "echo", "man"];
 
   // return 'Usage: <cmd>' if command arg is not valid
 
@@ -46,16 +48,18 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           echo: <Echo />,
           education: <Education />,
           email: <Email />,
+          experience: <Experience />,
           blogs: <Blogs />,
           resume: <Resume />,
           help: <Help />,
           history: <History />,
+          man: <Man />,
           projects: <Projects />,
-          pwd: <GeneralOutput>/home/utkarsh</GeneralOutput>,
+          pwd: <GeneralOutput>/home/shiva</GeneralOutput>,
           socials: <Socials />,
           themes: <Themes />,
           welcome: <Welcome />,
-          whoami: <GeneralOutput>~$Visitor</GeneralOutput>,
+          whoami: <GeneralOutput>shiva@nith — Full-Stack Developer | NIT Hamirpur 2026</GeneralOutput>,
           skills: <Skills />,
           hello: <Hello />,
           call: <Call />,
